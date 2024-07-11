@@ -1,4 +1,109 @@
 body{
     margin: 0;
     padding: 0;
+    position: relative;
+}
+.title_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.title_img svg{
+    width: 500px;
+}
+
+.menus {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-top: 1px solid #ebebeb;
+    border-bottom: 4px double black;
+}
+.menus button {
+    border: none;
+    background: none;
+    margin: 5px;
+    border-radius: 10px;
+}
+.menus button:hover {
+    background-color: bisque;
+}
+
+.news_img {
+    max-width: 100%;
+    max-height: 250px;
+}
+.news {
+    border-bottom: 3px solid black;
+}
+.menu-button {
+    display: none;
+    cursor: pointer;
+    position: relative;
+    left: -46%;
+}
+.menu-button .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #333;
+    transition: 0.4s;
+}
+.side_menus {
+    padding: 20px;
+    width: 300px;
+    height: 100vh;
+    background-color: wheat;
+    position: absolute;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    left: -300px;
+    position: fixed;
+  top: 0;
+  transition: left 0.3s ease;
+}
+.side_menus button {
+    border: 0;
+    background: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.close_btn img:hover,
+.side_menus button:hover {
+    background-color: beige;
+}
+.close_btn{
+    display: flex;
+    justify-content: end;
+}
+.menu_btn {
+    display: none;
+}
+.search_icon,
+.menu_btn img ,
+.close_btn img{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.search_input {
+    border: 0;
+    border-bottom: 1px solid gray;
+    padding: 10px;
+}
+@media all and (max-width: 768px) {
+    .menus {
+        display: none;
+    }
+    .menu_btn{
+        display: inline;
+    }
+    .container .search_bar {
+        display: none;
+    }
 }
